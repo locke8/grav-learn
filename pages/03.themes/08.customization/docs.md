@@ -125,7 +125,7 @@ You have now created a new theme called **mytheme** and set up the streams so th
 You can then provide just the files you need, including **JS**, **CSS**, or even modifications to **Twig template files** if you wish.
 In order to modify specific **SCSS** files, we need to use a little configuration magic for the SCSS compiler so it knows to look in your new `mytheme` location first, then `antimatter` second. This requires a couple of things.
 
-1. First, you need to copy over the main SCSS file from antimatter that contains all the `@import` calls for various sub files, including the `template/_custom.scss`. So, copy the `template.scss` file from `antimatter/scss/` to `mytheme/scss/` folder.
+1. First, you need to copy over the main SCSS file from antimatter that contains all the `@import` calls for various sub files, including the `template/_custom.scss`. So, copy the `theme.scss` file from `antimatter/scss/` to `mytheme/scss/` folder.
 2. Run the SCSS compiler and provide it with a `load-path` that points to the `antimatter/scss/` folder that will contain the bulk of the SCSS files:
    ```
    scss --load-path ../antimatter/scss --watch scss:css-compiled
